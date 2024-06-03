@@ -1,10 +1,10 @@
 "use strict";
 
- // Create script element for jQuery
- var jQueryScript = document.createElement('script');
- jQueryScript.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
- jQueryScript.onload = function () {
-   var jQuery = $.noConflict(true);
+// Create script element for jQuery
+var jQueryScript = document.createElement('script');
+jQueryScript.src = 'https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js';
+jQueryScript.onload = function () {
+  var jQuery = window.jQuery.noConflict(true);
 
   // Encapsulate jQuery code in an anonymous function
   (function ($) {
@@ -31,22 +31,21 @@
         $('.about-info-wrap').css('background-color', bgColor);
         $('.footer-logo-image').attr('src', darkMode ? 'https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/662831673fd2dec6eba4fecb_FST%20Logo-dark.png' : 'https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/6622cffa219b956a49edd98c_FST%20Logo-footer.png');
         $('.arrow-learn-more').attr('src', darkMode ? 'https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/665d430ea891207010a463e6_arrow-dark.svg' : 'https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/66302f64ff07464d678857b8_arrow-learn-more.svg');
-       
-        
+
         // Add/remove classes for dark mode
         $('.dark-light-button, .icon-circle-dark').toggleClass('opaque-dark', darkMode);
         $('.icon-circle-light').toggleClass('opaque-light', darkMode);
 
         if (darkMode) {
-            $('.hero-image-wrap-light').hide();
-            $('.hero-image-wrap-dark').show();
+          $('.hero-image-wrap-light').hide();
+          $('.hero-image-wrap-dark').show();
         } else {
-            $('.hero-image-wrap-light').show();
-            $('.hero-image-wrap-dark').hide();
+          $('.hero-image-wrap-light').show();
+          $('.hero-image-wrap-dark').hide();
         }
 
         // Update local storage
-        localStorage.setItem('we_clicks', darkMode);
+        localStorage.setItem('darkMode', darkMode);
       }
 
       // Check and toggle dark-light mode on page load
@@ -69,5 +68,5 @@
 
     });
   })(jQuery);
-}
+};
 document.head.appendChild(jQueryScript);
