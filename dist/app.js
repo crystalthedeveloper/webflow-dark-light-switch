@@ -608,8 +608,8 @@ jQueryScript.onload = function() {
                     "color": textColor
                 });
                 // Set styles for various elements
-                $(".paragraph, .rich-text p, .w-pagination-previous, .w-pagination-next, .empath-text, .footer-link, .about-title, .title, .h2, .course-labels, .bonus-h2, .true-or-false-text, .slider-arrow-icon").css("color", textColor);
-                $(".empath-text-brand, .learn-more-link").css("color", textColorBrand);
+                $(".paragraph, .rich-text p, .w-pagination-previous, .w-pagination-next, .empath-text, .footer-link, .about-title, .title, .h2, .course-labels, .bonus-h2, .true-or-false-text, .slider-arrow-icon, .reset-password-link, .h3, .hello-text-black, .name-mark-text").css("color", textColor);
+                $(".empath-text-brand, .learn-more-link, .h2").css("color", textColorBrand);
                 $(".about-info-wrap").css("background-color", bgColor);
                 $(".footer-logo-image").attr("src", darkMode ? "https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/662831673fd2dec6eba4fecb_FST%20Logo-dark.png" : "https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/6622cffa219b956a49edd98c_FST%20Logo-footer.png");
                 $(".arrow-learn-more").attr("src", darkMode ? "https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/665d430ea891207010a463e6_arrow-dark.svg" : "https://uploads-ssl.webflow.com/65f0d5739b651eae06b2ca56/66302f64ff07464d678857b8_arrow-learn-more.svg");
