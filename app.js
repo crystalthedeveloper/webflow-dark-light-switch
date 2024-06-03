@@ -43,7 +43,7 @@ jQueryScript.onload = function () {
                 }
 
                 // Update local storage
-                localStorage.setItem('darkMode', darkMode);
+                localStorage.setItem('we_clicks', darkMode);
             }
 
             // Check and toggle dark-light mode on page load
